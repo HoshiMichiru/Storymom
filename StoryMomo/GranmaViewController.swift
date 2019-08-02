@@ -28,13 +28,18 @@ class GranmaViewController: UIViewController {
     @IBAction func button(_ sender: UIButton) {
         if blank1.text == "山" && blank2.text == "川"{
             SCLAlertView().showNotice("Good answer!", subTitle: "You can go next")
+            //アラート閉じて画面遷移時間調整
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+                self.performSegue(withIdentifier: "toRiver", sender: nil)
+            }
             
         }else if blank1.text == "川" && blank2.text == "山"{
             SCLAlertView().showInfo("It's almost correct...but... ", subTitle: "Focus on sentence")
         }else{
             SCLAlertView().showError("Something Wrong! ...or let's write in blank!", subTitle:"you can try anytimes!")
-            
-        }
+            }
+        
+       
         
         
         
