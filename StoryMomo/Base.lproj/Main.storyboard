@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d92-cU-KgW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mwX-0n-ILs">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -159,20 +159,30 @@
         <!--Pickup View Controller-->
         <scene sceneID="2Bm-US-eIw">
             <objects>
+                <tapGestureRecognizer id="Dvz-1s-cAi">
+                    <connections>
+                        <action selector="tap:" destination="mwX-0n-ILs" id="aiK-sT-N2J"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FC-E9-9j7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mwX-0n-ILs" customClass="PickupViewController" customModule="StoryMomo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpJ-zq-DsE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHb-b8-ZL9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="peach" translatesAutoresizingMaskIntoConstraints="NO" id="AHb-b8-ZL9">
                                 <rect key="frame" x="20" y="215" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Dvz-1s-cAi" appends="YES" id="mlF-GX-nHh"/>
+                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-P8-8wn">
                                 <rect key="frame" x="39" y="79" width="337" height="135.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">＊桃を拾ったおばあさんは、家に帰っておじいさんに見せることにしました。
+                                <string key="text">桃を拾ったおばあさんは、家に帰っておじいさんに見せることにしました。
 桃を見たおじいさんは…</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -207,13 +217,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="9Wy-b7-Bqs"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WH3-WA-MwT" appends="YES" id="hi7-hE-YIH"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="changeImage" destination="AHb-b8-ZL9" id="sR8-95-Bnu"/>
+                        <outlet property="peachImage" destination="AHb-b8-ZL9" id="eMt-Y9-xW9"/>
                         <segue destination="82H-m7-hKk" kind="show" identifier="Cut" id="eXd-Eh-ozG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8FC-E9-9j7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="WH3-WA-MwT">
+                    <connections>
+                        <action selector="swipeDown:" destination="mwX-0n-ILs" id="nZv-er-bIG"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2486.9565217391305" y="91.741071428571431"/>
         </scene>
@@ -230,7 +250,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">桃を＊切ると、なんと中から赤ちゃんが出てきました。
-彼らは赤ちゃんを〇〇○と名付け、愛情をたくさん注いで育てました。</string>
+彼らは赤ちゃんを桃太郎と名付け、愛情をたくさん注いで育てました。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -238,10 +258,17 @@
                                 <rect key="frame" x="20" y="213" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sX8-c7-tVX">
+                                <rect key="frame" x="84" y="552" width="247" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0de-YW-c1u"/>
                     </view>
+                    <connections>
+                        <segue destination="v6z-m6-C79" kind="show" identifier="toDeparture" id="ly6-H3-uzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTx-70-F0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,13 +281,31 @@
                     <view key="view" contentMode="scaleToFill" id="jVx-wJ-a6x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="たくましく成長した桃太郎は、旅に出て自分をもっと高めたいと思うようになりました。おじいさんとおばあさんは、桃太郎に旅の支度をさせて送り出すことにしたのです。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-hl-8o3">
+                                <rect key="frame" x="39" y="59" width="337" height="135.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-Fy-h4j">
+                                <rect key="frame" x="20" y="215" width="374" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-0m-plG">
+                                <rect key="frame" x="52" y="604" width="111" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QYx-PA-WYS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwn-lO-RnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4141" y="92"/>
+            <point key="canvasLocation" x="4140.579710144928" y="91.741071428571431"/>
         </scene>
         <!--River View Controller-->
         <scene sceneID="zpD-0U-UXZ">
@@ -278,46 +323,61 @@
                                 <rect key="frame" x="35" y="80" width="337" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">おじいさんは　＊山へ、おばあさんは＊川へ向かい、各々仕事をしていました。
-…おばあさんが川で洗濯をしていると、何と大きな？？がどんぶらこ〜どんぶらこ〜と流れてきました。</string>
+                                <string key="text">おじいさんは　山へ、おばあさんは川へ向かい、各々作業をしていました。
+…おばあさんが川で洗濯をしていると、何と大きな何かがどんぶらこ〜どんぶらこ〜と流れてきました。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3T-8C-fUc">
                                 <rect key="frame" x="20" y="621" width="118" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="次へ進む">
+                                <state key="normal" title="fish">
                                     <color key="titleShadowColor" red="0.4494844248" green="1" blue="0.90893458569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="fishButton:" destination="QVy-1s-fvl" eventType="touchUpInside" id="1I2-rF-vCL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8E-i6-CtU">
                                 <rect key="frame" x="276" y="621" width="118" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="次へ進む">
+                                <state key="normal" title="kid">
                                     <color key="titleShadowColor" red="0.4494844248" green="1" blue="0.90893458569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mwX-0n-ILs" kind="show" identifier="Pickup" id="QEQ-0B-pBc"/>
+                                    <action selector="kidButton:" destination="QVy-1s-fvl" eventType="touchUpInside" id="ntd-EZ-NOy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-Mu-AqU">
-                                <rect key="frame" x="148" y="621" width="118" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="次へ進む">
-                                    <color key="titleShadowColor" red="0.4494844248" green="1" blue="0.90893458569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="？？って何だ・・・" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqs-WY-Ls7">
-                                <rect key="frame" x="129" y="495" width="156" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="何が流れてきたのでしょう？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqs-WY-Ls7">
+                                <rect key="frame" x="94" y="506" width="226" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMF-hQ-KNc">
+                                <rect key="frame" x="170" y="624" width="80" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="peach" image="peach">
+                                    <color key="titleShadowColor" red="0.4494844248" green="1" blue="0.90893458569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="fishButton:" destination="QVy-1s-fvl" eventType="touchUpInside" id="Rrc-NS-gPv"/>
+                                    <action selector="peachButton:" destination="QVy-1s-fvl" eventType="touchUpInside" id="o4X-sb-G2b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="An8-DY-zL4"/>
                     </view>
+                    <connections>
+                        <outlet property="fishButton" destination="P3T-8C-fUc" id="yCG-09-Z9R"/>
+                        <outlet property="imageView" destination="ieS-yF-dgq" id="bpJ-fo-OGO"/>
+                        <outlet property="kidbutton" destination="j8E-i6-CtU" id="qD8-GW-SxQ"/>
+                        <outlet property="labelView" destination="Rqs-WY-Ls7" id="OOQ-B8-9Nd"/>
+                        <outlet property="textView" destination="eT3-kf-hwj" id="Mq2-vO-4HA"/>
+                        <segue destination="mwX-0n-ILs" kind="show" identifier="toCut" id="Rj1-zv-tiF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfl-Kd-sHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,5 +416,6 @@
     </scenes>
     <resources>
         <image name="fam" width="180" height="180"/>
+        <image name="peach" width="400" height="399"/>
     </resources>
 </document>

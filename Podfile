@@ -7,6 +7,6 @@ target 'StoryMomo' do
 
   # Pods for StoryMomo
  pod 'SCLAlertView'
-
+ pod 'FontAwesome.swift'
 
 end
