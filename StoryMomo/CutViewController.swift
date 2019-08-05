@@ -10,6 +10,10 @@ import UIKit
 
 class CutViewController: UIViewController {
 
+    @IBOutlet weak var babyImage: UIImageView!
+    @IBOutlet weak var foodImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

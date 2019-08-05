@@ -159,11 +159,6 @@
         <!--Pickup View Controller-->
         <scene sceneID="2Bm-US-eIw">
             <objects>
-                <tapGestureRecognizer id="Dvz-1s-cAi">
-                    <connections>
-                        <action selector="tap:" destination="mwX-0n-ILs" id="aiK-sT-N2J"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FC-E9-9j7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mwX-0n-ILs" customClass="PickupViewController" customModule="StoryMomo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpJ-zq-DsE">
@@ -174,9 +169,6 @@
                                 <rect key="frame" x="20" y="215" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Dvz-1s-cAi" appends="YES" id="mlF-GX-nHh"/>
-                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-P8-8wn">
                                 <rect key="frame" x="39" y="79" width="337" height="135.5"/>
@@ -220,20 +212,25 @@
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="9Wy-b7-Bqs"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="WH3-WA-MwT" appends="YES" id="hi7-hE-YIH"/>
+                            <outletCollection property="gestureRecognizers" destination="zfs-b7-QcX" appends="YES" id="GSD-Xh-6hT"/>
+                            <outletCollection property="gestureRecognizers" destination="H00-F9-Bhw" appends="YES" id="qtf-Hl-Al2"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="changeImage" destination="AHb-b8-ZL9" id="sR8-95-Bnu"/>
-                        <outlet property="peachImage" destination="AHb-b8-ZL9" id="eMt-Y9-xW9"/>
+                        <outlet property="changeImage" destination="AHb-b8-ZL9" id="qet-Ll-axf"/>
                         <segue destination="82H-m7-hKk" kind="show" identifier="Cut" id="eXd-Eh-ozG"/>
                     </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="right" id="WH3-WA-MwT">
+                <swipeGestureRecognizer direction="down" id="zfs-b7-QcX">
                     <connections>
-                        <action selector="swipeDown:" destination="mwX-0n-ILs" id="nZv-er-bIG"/>
+                        <action selector="swipeDown:" destination="mwX-0n-ILs" id="zzn-aB-ZYR"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="H00-F9-Bhw">
+                    <connections>
+                        <action selector="tapButton:" destination="mwX-0n-ILs" id="Lvg-n6-83I"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2486.9565217391305" y="91.741071428571431"/>
         </scene>
@@ -249,28 +246,35 @@
                                 <rect key="frame" x="39" y="70" width="337" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">桃を＊切ると、なんと中から赤ちゃんが出てきました。
+                                <string key="text">桃を切ると、なんと中から赤ちゃんが出てきました。
 彼らは赤ちゃんを桃太郎と名付け、愛情をたくさん注いで育てました。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-qX-0Zy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="born" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-qX-0Zy">
                                 <rect key="frame" x="20" y="213" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sX8-c7-tVX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="milk" translatesAutoresizingMaskIntoConstraints="NO" id="sX8-c7-tVX">
                                 <rect key="frame" x="84" y="552" width="247" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="0de-YW-c1u"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9jL-cn-4L8" appends="YES" id="u7I-01-mkX"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="babyImage" destination="MqB-qX-0Zy" id="S0U-XS-3N1"/>
+                        <outlet property="foodImage" destination="sX8-c7-tVX" id="gfT-mS-bZB"/>
                         <segue destination="v6z-m6-C79" kind="show" identifier="toDeparture" id="ly6-H3-uzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTx-70-F0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="9jL-cn-4L8"/>
             </objects>
             <point key="canvasLocation" x="3363.7681159420295" y="91.741071428571431"/>
         </scene>
@@ -415,7 +419,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="born" width="180" height="180"/>
         <image name="fam" width="180" height="180"/>
+        <image name="milk" width="480" height="480"/>
         <image name="peach" width="400" height="399"/>
     </resources>
 </document>

@@ -13,10 +13,9 @@ class PickupViewController: UIViewController {
     
     @IBOutlet weak var changeImage: UIImageView!
     
+    
     let born = UIImage(named: "born")
     
-
-    @IBOutlet weak var peachImage: UIImageView!
     var swipeCount = 0
     var tapCount = 0
     
@@ -25,8 +24,10 @@ class PickupViewController: UIViewController {
 }
     
     //下にスワイプ
-    @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
     
+    
+    @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
+
         swipeCount += 1
         if swipeCount == 1{
          DispatchQueue.main.asyncAfter(deadline:.now() + 0.5){
@@ -36,14 +37,19 @@ class PickupViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
             SCLAlertView().showSuccess("Good job!", subTitle: "A baby came out!")
             
+            
         }
     }
         }
+        
+        
     
 
 }
-    @IBAction func tap(_ sender: UITapGestureRecognizer) {
-        tapCount += 1
+    
+
+    @IBAction func tapButton(_ sender: UITapGestureRecognizer) {
+    tapCount += 1
         
         if tapCount == 1{
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
