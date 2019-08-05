@@ -34,7 +34,7 @@ class RiverViewController: UIViewController {
     }
     
     @IBAction func fishButton(_ sender: UIButton) {
-         SCLAlertView().showNotice("It's  just ordinaly", subTitle: "try again!")
+         SCLAlertView().showSuccess("It's  just ordinaly", subTitle: "try again!")
         
     }
     

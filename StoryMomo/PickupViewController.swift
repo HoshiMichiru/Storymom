@@ -34,8 +34,12 @@ class PickupViewController: UIViewController {
             self.changeImage.image = self.born
             
         //1秒後に！
-        DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
+        DispatchQueue.main.asyncAfter(deadline:.now() + 0.5){
             SCLAlertView().showSuccess("Good job!", subTitle: "A baby came out!")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                self.performSegue(withIdentifier: "Cut", sender: nil)
+            }
             
             
         }
@@ -52,7 +56,7 @@ class PickupViewController: UIViewController {
     tapCount += 1
         
         if tapCount == 1{
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
         SCLAlertView().showNotice("Nothing happens", subTitle: "Try again!")   }
         
     }

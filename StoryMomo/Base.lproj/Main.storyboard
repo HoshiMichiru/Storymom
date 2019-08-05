@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mwX-0n-ILs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -274,7 +274,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTx-70-F0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="9jL-cn-4L8"/>
+                <swipeGestureRecognizer direction="up" id="9jL-cn-4L8">
+                    <connections>
+                        <action selector="swipeUp:" destination="82H-m7-hKk" id="KIV-Ev-aRg"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3363.7681159420295" y="91.741071428571431"/>
         </scene>
@@ -319,7 +323,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-yF-dgq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kawa" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-yF-dgq">
                                 <rect key="frame" x="20" y="216" width="374" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -370,6 +374,14 @@
                                     <action selector="peachButton:" destination="QVy-1s-fvl" eventType="touchUpInside" id="o4X-sb-G2b"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baba" translatesAutoresizingMaskIntoConstraints="NO" id="C2u-Nd-iKw">
+                                <rect key="frame" x="276" y="379" width="83" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pi" translatesAutoresizingMaskIntoConstraints="NO" id="E1M-no-JQl">
+                                <rect key="frame" x="166" y="379" width="75" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="An8-DY-zL4"/>
@@ -419,9 +431,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baba" width="209" height="242"/>
         <image name="born" width="180" height="180"/>
         <image name="fam" width="180" height="180"/>
+        <image name="kawa" width="400" height="370"/>
         <image name="milk" width="480" height="480"/>
         <image name="peach" width="400" height="399"/>
+        <image name="pi" width="16" height="16"/>
     </resources>
 </document>
