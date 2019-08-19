@@ -14,7 +14,7 @@ class PickupViewController: UIViewController {
     @IBOutlet weak var changeImage: UIImageView!
     
     
-    let born = UIImage(named: "born")
+    let born = UIImage(named: "haihai")
     
     var swipeCount = 0
     var tapCount = 0
@@ -30,14 +30,14 @@ class PickupViewController: UIViewController {
 
         swipeCount += 1
         if swipeCount == 1{
-         DispatchQueue.main.asyncAfter(deadline:.now() + 0.5){
+         DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
             self.changeImage.image = self.born
             
         //1秒後に！
-        DispatchQueue.main.asyncAfter(deadline:.now() + 0.5){
+        DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
             SCLAlertView().showSuccess("Good job!", subTitle: "A baby came out!")
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
                 self.performSegue(withIdentifier: "Cut", sender: nil)
             }
             

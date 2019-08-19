@@ -42,7 +42,7 @@ class RiverViewController: UIViewController {
     @IBAction func peachButton(_ sender: UIButton) {
         SCLAlertView().showSuccess("You're correct!", subTitle: "Let's go next")
         //アラート閉じて画面遷移
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
             self.performSegue(withIdentifier: "toCut", sender: nil)
         }
         

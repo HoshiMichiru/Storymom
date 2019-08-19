@@ -29,7 +29,7 @@ class GranmaViewController: UIViewController {
         if blank1.text == "山" && blank2.text == "川"{
             SCLAlertView().showSuccess("Good answer!", subTitle: "You can go next")
             //アラート閉じて画面遷移時間調整
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
                 self.performSegue(withIdentifier: "toRiver", sender: nil)
             }
             

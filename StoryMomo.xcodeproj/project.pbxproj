@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		CFD1FA7D22F077E600468491 /* RiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1FA7C22F077E600468491 /* RiverViewController.swift */; };
 		CFD1FA7F22F07A1900468491 /* PickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1FA7E22F07A1900468491 /* PickupViewController.swift */; };
 		CFD1FA8122F07D3000468491 /* CutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1FA8022F07D3000468491 /* CutViewController.swift */; };
+		CFE369092302C0BF00774B2D /* DepartureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE369082302C0BF00774B2D /* DepartureViewController.swift */; };
+		CFE3690B2302CA3900774B2D /* MeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE3690A2302CA3900774B2D /* MeetViewController.swift */; };
+		CFE5BA95230A2A0000ED98A3 /* TownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5BA94230A2A0000ED98A3 /* TownViewController.swift */; };
+		CFE5BA97230A2AE800ED98A3 /* Road1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5BA96230A2AE800ED98A3 /* Road1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		CFD1FA7C22F077E600468491 /* RiverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverViewController.swift; sourceTree = "<group>"; };
 		CFD1FA7E22F07A1900468491 /* PickupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupViewController.swift; sourceTree = "<group>"; };
 		CFD1FA8022F07D3000468491 /* CutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutViewController.swift; sourceTree = "<group>"; };
+		CFE369082302C0BF00774B2D /* DepartureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureViewController.swift; sourceTree = "<group>"; };
+		CFE3690A2302CA3900774B2D /* MeetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetViewController.swift; sourceTree = "<group>"; };
+		CFE5BA94230A2A0000ED98A3 /* TownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownViewController.swift; sourceTree = "<group>"; };
+		CFE5BA96230A2AE800ED98A3 /* Road1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road1ViewController.swift; sourceTree = "<group>"; };
 		E389F42ACA3FDD6FE5A81B9A /* Pods_StoryMomo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryMomo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,7 +62,6 @@
 				1CBA1F78BD4CF855417E6E88 /* Pods-StoryMomo.debug.xcconfig */,
 				BB21D494E5AA63F5DF304443 /* Pods-StoryMomo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,7 @@
 		CFD1FA5C22F0751200468491 = {
 			isa = PBXGroup;
 			children = (
+				CFE368D522FC67C900774B2D /* controllerView */,
 				CFD1FA6722F0751200468491 /* StoryMomo */,
 				CFD1FA6622F0751200468491 /* Products */,
 				02805E1A99643685C8F1CCA3 /* Pods */,
@@ -93,12 +101,23 @@
 				CFD1FA6F22F0751200468491 /* Assets.xcassets */,
 				CFD1FA7122F0751200468491 /* LaunchScreen.storyboard */,
 				CFD1FA7422F0751200468491 /* Info.plist */,
+			);
+			path = StoryMomo;
+			sourceTree = "<group>";
+		};
+		CFE368D522FC67C900774B2D /* controllerView */ = {
+			isa = PBXGroup;
+			children = (
 				CFD1FA7A22F075FE00468491 /* GranmaViewController.swift */,
 				CFD1FA7C22F077E600468491 /* RiverViewController.swift */,
 				CFD1FA7E22F07A1900468491 /* PickupViewController.swift */,
 				CFD1FA8022F07D3000468491 /* CutViewController.swift */,
+				CFE369082302C0BF00774B2D /* DepartureViewController.swift */,
+				CFE3690A2302CA3900774B2D /* MeetViewController.swift */,
+				CFE5BA94230A2A0000ED98A3 /* TownViewController.swift */,
+				CFE5BA96230A2AE800ED98A3 /* Road1ViewController.swift */,
 			);
-			path = StoryMomo;
+			path = controllerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,11 +235,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE369092302C0BF00774B2D /* DepartureViewController.swift in Sources */,
 				CFD1FA7F22F07A1900468491 /* PickupViewController.swift in Sources */,
 				CFD1FA8122F07D3000468491 /* CutViewController.swift in Sources */,
 				CFD1FA6B22F0751200468491 /* ViewController.swift in Sources */,
+				CFE5BA97230A2AE800ED98A3 /* Road1ViewController.swift in Sources */,
 				CFD1FA6922F0751200468491 /* AppDelegate.swift in Sources */,
+				CFE3690B2302CA3900774B2D /* MeetViewController.swift in Sources */,
 				CFD1FA7B22F075FE00468491 /* GranmaViewController.swift in Sources */,
+				CFE5BA95230A2A0000ED98A3 /* TownViewController.swift in Sources */,
 				CFD1FA7D22F077E600468491 /* RiverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
