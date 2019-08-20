@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QVy-1s-fvl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ZS-8J-akL">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -484,7 +484,7 @@
                         <viewLayoutGuide key="safeArea" id="47h-Bs-1of"/>
                     </view>
                     <connections>
-                        <segue destination="1ZS-8J-akL" kind="show" identifier="toRoad" id="tF9-RD-060"/>
+                        <segue destination="1ZS-8J-akL" kind="show" identifier="toRoad" id="P6y-dr-788"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1q-8d-c9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -499,15 +499,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="鬼ヶ島への道中では、鬼ヶ島への道運を示す、看板が立っていました。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZeX-0h-CXG">
-                                <rect key="frame" x="76" y="55" width="240" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="正解だと思う矢印の方向に進もう！" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgI-id-0No">
-                                <rect key="frame" x="85" y="159" width="250" height="30"/>
+                                <rect key="frame" x="82" y="200" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -548,10 +541,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="鬼ヶ島への道中では、鬼ヶ島への道順を示す、看板が立っていました。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZeX-0h-CXG">
+                                <rect key="frame" x="76" y="96" width="240" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mjw-Od-Knk"/>
                     </view>
+                    <connections>
+                        <outlet property="LButton" destination="4IG-bt-i0k" id="u00-fC-Mes"/>
+                        <outlet property="Llabel" destination="tNy-sJ-wL1" id="A4i-T8-asV"/>
+                        <outlet property="Rbutton" destination="BlD-XK-ME3" id="Jyv-RB-sSk"/>
+                        <outlet property="Rlabel" destination="7FS-cD-dx3" id="Sot-7a-byS"/>
+                        <outlet property="image" destination="gcs-C1-bf5" id="dD1-DF-IRg"/>
+                        <outlet property="question" destination="D7Y-fF-cFa" id="0F5-J9-XRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHO-LW-UYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
